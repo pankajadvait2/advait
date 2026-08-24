@@ -31,7 +31,7 @@ jobs:
       - name: setup terraform             # terraform setup and installation
         uses: hashicorp/setup-terraform@v2.0.3
 
-      - name: Azure Login              #azure login
+      - name: Azure Login                                 #azure login
         uses: azure/login@v2
         with:                                            #app registration and git secrets me client id, tenant id and subscription id add karna hoga
            client-id: ${{ secrets.AZURE_CLIENT_ID }}
