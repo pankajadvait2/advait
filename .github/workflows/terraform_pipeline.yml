@@ -3,7 +3,7 @@ name: Terraform_Pipeline
 on: 
   push:
     branches:
-      - "feature/new-yml-code-added"
+      - "feature/new-yml-code-new"
   pull_request:
     branches:
       - main
