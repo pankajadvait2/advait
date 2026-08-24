@@ -1,9 +1,9 @@
-name: Terraform_Pipeline
+name: Terraform_Pipeline  # this is the name of the pipeline you can change it as per your requirement
 
-on: 
+on:       # triggers for the pipeline
   push:
     branches:
-      - "feature/new-yml-code-new"
+      - "feature/new-yml-code-new"  # this is the branch name isi name se feature branch banayenge tabhi pipeline run hogi
   pull_request:
     branches:
       - main
@@ -25,10 +25,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v7
 
-      - name: setup terraform
+      - name: Gitleaks Secret Scan       #gitleaks secret scan for security purpose
+        uses: gitleaks/gitleaks-action@v2
+
+      - name: setup terraform             # terraform setup and installation
         uses: hashicorp/setup-terraform@v2.0.3
-#azure login
-      - name: Azure Login
+
+      - name: Azure Login              #azure login
         uses: azure/login@v2
         with:
            client-id: ${{ secrets.AZURE_CLIENT_ID }}
