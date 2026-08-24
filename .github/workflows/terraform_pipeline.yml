@@ -19,7 +19,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./parent
+        working-directory: ./parent  #terraform code directory path
 
     steps:
       - name: checkout
