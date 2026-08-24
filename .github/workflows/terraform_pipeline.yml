@@ -27,7 +27,7 @@ jobs:
 
       - name: setup terraform
         uses: hashicorp/setup-terraform@v2.0.3
-
+#azure login
       - name: Azure Login
         uses: azure/login@v2
         with:
