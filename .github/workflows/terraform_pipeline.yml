@@ -19,7 +19,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./advait/parent
+        working-directory: ./parent
 
     steps:
       - name: checkout
