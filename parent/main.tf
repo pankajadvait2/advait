@@ -4,12 +4,6 @@ module "rg" {
 
 }
 
-# module "sa" {
-#   depends_on = [module.rg]
-#   source     = "../module/azurerm_sa"
-#   sam        = var.sap
-# }
-
 module "vnet" {
   source     = "../module/azurerm_vnet"
   mnet       = var.pnet
